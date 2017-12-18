@@ -1,0 +1,16 @@
+body {
+  font-family: monospace;
+}
+.container {
+  display: grid;
+  margin: 10% 10% 10% 10%;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto-fit, .5fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  padding: 3px;
+}
+.grid-item {
+  text-align: center;
+  border: 1px solid black;
+}

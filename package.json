@@ -1,0 +1,21 @@
+{
+  "name": "dust-hackernews-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.13.1"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "dustjs-linkedin": "^2.7.5",
+    "express": "^4.16.2"
+  }
+}

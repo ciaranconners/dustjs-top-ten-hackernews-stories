@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+  <title>ten top hackernews stories</title>
+</head>
+<body>
+  <h1>ten top hackernews stories</h1>
+  <div class="container">
+    {#stories}
+      {#.}
+        <div class="grid-item">
+          <a href={url}>{title}</a>
+          <div><b>Score:</b> {score}</div>
+          <div><b>AuthorID:</b> {authorId}</div>
+          <div><b>AuthorKarma:</b> {authorKarma}</div>
+        </div>
+      {/.}
+    {/stories}
+  </div>
+</body>
+</body>
+</html>
