@@ -35,12 +35,17 @@ app.get('/', (req, res) => {
             storyResponses.forEach((s, i) => {
               const authorKarma = authorResponses[i].data.karma;
               const { title, score, url, time, by: authorId } = s.data;
-              const story = { title, score, url, authorKarma, authorId, timestamp: new Date(time * 1000) };
+              const story = {
+                title,
+                score,
+                url,
+                authorKarma,
+                authorId,
+                timestamp: new Date(time * 1000),
+              };
               stories.push(story);
             });
-            dust.render('index', { stories }, (err, out) => {
-              res.send(out);
-            });
+            dust.stream('index', { stories }).pipe(res).on('end', () => {});
           })
             .catch(err => console.error(err));
         })
@@ -49,25 +54,6 @@ app.get('/', (req, res) => {
     .catch(err => console.error(err));
 });
 
-app.get('/styles.css', (req, res) => {
-  res.sendFile('/views/styles.css');
-});
-
-// app.get('/streaming', (req, res) => {
-//   dust.stream('hello', context).pipe(res)
-//     .on('end', () => {
-//       console.log('Done!');
-//     });
-// });
-
-// app.get('/rendering', (req, res) => {
-//   dust.render('hello', context, (err, out) => {
-//     res.send(out);
-//     console.log('Done!');
-//   });
-// });
-
 app.listen(3000, () => {
-  console.log('Using dust version', dust.version);
-  console.log('Visit http://localhost:3000');
+  console.log('listening on port 3000');
 });
