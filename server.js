@@ -13,6 +13,9 @@ dust.onLoad = (tmpl, cb) => {
 const app = express();
 
 app.use('/stylesheets', express.static(path.join(__dirname, './stylesheets')));
+app.use('/node_modules', express.static(path.join(__dirname, './node_modules')));
+app.use('/scripts', express.static(path.join(__dirname, './scripts')));
+
 app.set('view engine', 'dust');
 
 app.get('/', (req, res) => {

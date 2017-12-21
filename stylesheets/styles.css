@@ -1,7 +1,8 @@
 body {
   font-family: monospace;
+  background-color: lightblue;
 }
-.container {
+#stories-container {
   display: grid;
   margin: 10% 10% 10% 10%;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -10,7 +11,7 @@ body {
   grid-row-gap: 2px;
   padding: 3px;
 }
-.grid-item {
+.story {
   text-align: center;
   border: 1px solid black;
 }

@@ -1,0 +1,16 @@
+<h1>ten top hackernews stories</h1>
+{! <button id="score-sort">Sort By Score</button> !}
+<button id="karma-sort">Sort By AuthorKarma</button>
+<div id="stories-container">
+  {#stories}
+    {#.}
+      <div class="story">
+        <a href={url}> <span id="title">{title}</span></a>
+        <div><b>Score:</b> <span id="score">{score}</span></div>
+        <div><b>AuthorID:</b> <span id="id">{authorId}</span></div>
+        <div><b>AuthorKarma:</b> <span id="karma">{authorKarma}</span></div>
+      </div>
+    {/.}
+  {/stories}
+</div>
+<script type="text/javascript" src="scripts/sort.js"></script>

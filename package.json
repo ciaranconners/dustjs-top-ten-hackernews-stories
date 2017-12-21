@@ -16,6 +16,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "dustjs-linkedin": "^2.7.5",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "jquery": "^3.2.1"
   }
 }
